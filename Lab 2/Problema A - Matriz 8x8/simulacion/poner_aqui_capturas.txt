@@ -1,0 +1,5 @@
+Agregar aqui:
+
+- captura del proyecto de Proteus
+- captura del error AVR2.DLL
+- archivo .zip del proyecto Proteus si se quiere guardar junto a la evidencia
