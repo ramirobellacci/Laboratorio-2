@@ -2,7 +2,7 @@
 
 ## CONEXION MATRIZ 1088AS
 
-Usar resistencias de 220 ohm o 330 ohm en las lineas positivas de la matriz.
+Use resistencias de 330 Ohm
 
 | senal | pin matriz | pin arduino |
 | --- | ---: | --- |
@@ -39,13 +39,6 @@ Usar resistencias de 220 ohm o 330 ohm en las lineas positivas de la matriz.
 | 2 | corazon |
 | 3 | cara |
 | 4 | flecha |
-| 5 | prueba de matriz |
 | + | mas rapido |
 | - | mas lento |
 | m | mostrar menu |
-
-## NOTAS
-
-Si la matriz se ve invertida o espejada, primero revisar que la muesca del componente este bien orientada.
-
-Si no prende nada, probar invertir el criterio de filas y columnas en el armado, porque algunos vendedores nombran filas y columnas al reves aunque el modelo sea 1088AS.
