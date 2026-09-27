@@ -6,11 +6,9 @@
 | ---: | --- |
 | 1 | arduino uno compatible |
 | 1 | matriz led 8x8 1088AS |
-| 8 | resistencias de 1k para primera prueba |
-| 8 | resistencias de 330 ohm o 220 ohm para prueba final |
+| 8 | resistencias de 330 ohm|
 | 1 | protoboard |
 | varios | cables macho-macho |
-| 1 | cable usb |
 
 ## PINES DE LA MATRIZ
 
@@ -47,4 +45,3 @@ Las resistencias van en las columnas, que son los anodos:
 | c8 | a0 -> resistencia -> pin 16 matriz |
 
 
-- probar resistencias de 330 ohm despues de confirmar que el dibujo es correcto.
