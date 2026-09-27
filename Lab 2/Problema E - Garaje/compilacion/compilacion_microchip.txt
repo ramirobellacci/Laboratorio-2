@@ -1,0 +1,7 @@
+COMPILACION MICROCHIP STUDIO PROBLEMA E
+
+Proyecto: Automatizacion de una puerta de garaje
+Resultado: Build succeeded
+Errores: 0
+Advertencias: 0
+Archivo de evidencia: microchip_compilacion_0_errores.png

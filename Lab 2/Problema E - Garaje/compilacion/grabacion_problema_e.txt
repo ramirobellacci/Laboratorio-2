@@ -1,0 +1,7 @@
+GRABACION PROBLEMA E
+
+Programa: porton_garaje_microchip.hex
+Puerto usado: COM3
+Microcontrolador: ATmega328P
+Resultado: grabado y verificado correctamente con avrdude
+Flash escrita: 798 bytes

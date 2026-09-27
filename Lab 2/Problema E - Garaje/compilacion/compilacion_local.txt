@@ -1,0 +1,6 @@
+COMPILACION LOCAL PROBLEMA E
+
+Herramienta: avrasm2.exe
+Resultado: 0 errors, 0 warnings
+Uso de memoria: .cseg 698 bytes, .dseg 3 bytes
+Nota: falta guardar captura de Microchip Studio como evidencia visual.

@@ -1,0 +1,10 @@
+Guardar aqui fotos o videos del armado fisico funcionando.
+
+Evidencia recomendada:
+
+Puerta cerrada.
+Puerta abriendo con alarma encendida.
+Puerta abierta.
+Puerta cerrando con alarma encendida.
+Obstaculo detectado y movimiento detenido.
+

@@ -1,0 +1,8 @@
+Notas breves para el informe final:
+
+El problema E se implementa con una maquina de estados.
+
+Los actuadores del porton se simulan con LEDs.
+
+El sensor de obstaculo usa interrupcion por cambio de pin PCINT22 en D6.
+
