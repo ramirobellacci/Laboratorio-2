@@ -11,22 +11,6 @@
 | 1 | protoboard y fuente regulada de 5 V |
 | 1 | osciloscopio |
 
-Conviene usar resistencias de 1 % en la red R-2R. Tambien se puede construir con
-R = 10 k y 2R = 20 k.
-
-## Alimentacion y reloj
-
-| Pin DIP | Nombre | Conexion |
-| ---: | --- | --- |
-| 7 | VCC | +5 V |
-| 20 | AVCC | +5 V |
-| 8 | GND | GND |
-| 22 | GND | GND |
-| 21 | AREF | capacitor de 100 nF a GND |
-| 9 | XTAL1 | un extremo del cristal de 16 MHz |
-| 10 | XTAL2 | otro extremo del cristal de 16 MHz |
-| 1 | RESET | resistencia de 10 k a +5 V |
-
 
 ## Pines del DAC
 
@@ -41,15 +25,6 @@ R = 10 k y 2R = 20 k.
 | 6 | PB0 | 14 | D8 | |
 | 7 | PB1 | 15 | D9 | MSB |
 
-## Red R-2R
-
-Usar la topologia pasiva con la salida en el nodo del bit 7:
-
-1. Formar ocho nodos, uno por bit, unidos entre si por siete resistencias R.
-2. Conectar cada pin del ATmega a su nodo mediante una resistencia 2R.
-3. El nodo del bit 7 es VOUT y queda junto al extremo de mayor peso.
-4. Desde el nodo del bit 0 conectar una resistencia 2R adicional a GND como
-   terminacion.
 
 Orden de los nodos desde VOUT hacia la terminacion:
 
@@ -62,17 +37,6 @@ Cada texto `bitN` representa un nodo que recibe el pin correspondiente a traves
 de una resistencia 2R. No conectar un LED directamente a VOUT porque carga la
 red y deforma la señal.
 
-## UART
-
-| ATmega328P | Adaptador USB-TTL |
-| --- | --- |
-| pin 3, PD1/TXD | RXD |
-| pin 2, PD0/RXD | TXD |
-| GND | GND |
-
-Configurar la terminal a 9600 baudios, 8 bits, sin paridad y 1 bit de parada.
-TX y RX van cruzados. Si el circuito ya tiene fuente propia, no unir tambien el
-pin de 5 V del adaptador; solamente compartir GND.
 
 ## Osciloscopio
 
@@ -84,20 +48,6 @@ pin de 5 V del adaptador; solamente compartir GND.
 Para comenzar, usar 1 V/div y 5 ms/div, acoplamiento DC. La salida teorica va de
 0 V a aproximadamente 4,98 V y debe medirse con una entrada de alta impedancia.
 
-## Programacion por ISP
-
-| Señal ISP | Pin ATmega328P DIP |
-| --- | ---: |
-| RESET | 1 |
-| MOSI | 17 |
-| MISO | 18 |
-| SCK | 19 |
-| VCC | 7 y 20 |
-| GND | 8 y 22 |
-
-El micro debe quedar configurado para usar el cristal externo de 16 MHz. Cargar
-el archivo `compilacion/dac_r2r_uart.hex`. El monitor serial no requiere
-bootloader; el bootloader solo es necesario si se pretende grabar por UART.
 
 ## Prueba
 
