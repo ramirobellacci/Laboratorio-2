@@ -1,5 +1,0 @@
-Agregar aqui:
-
-- foto del armado fisico completo
-- video del monitor serial usando las opciones 1, 2, 3, 4, 5, + y -
-- video de la matriz mostrando el texto MICROS LO MEJOR
