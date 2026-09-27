@@ -8,7 +8,7 @@
 | 7 | resistencias de 1 k, valor R |
 | 9 | resistencias de 2 k, valor 2R |
 | 1 | adaptador USB-TTL de 5 V |
-| 1 | protoboard y fuente regulada de 5 V |
+| 1 | protoboard|
 | 1 | osciloscopio |
 
 
