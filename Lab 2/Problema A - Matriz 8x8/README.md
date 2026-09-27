@@ -19,7 +19,7 @@ Mensaje usado: MICROS LO MEJOR
 | carpeta | contenido |
 | --- | --- |
 | `codigo` | codigo assembler final |
-| `compilacion` | archivos HEX, LST, MAP y captura de compilacion |
+| `compilacion` | archivos HEX y captura de compilacion |
 | `simulacion` | capturas o archivos de Proteus |
 | `armado_fisico` | conexiones, guia, fotos y video |
 
@@ -40,24 +40,6 @@ El programa muestra un menu por UART al iniciar. El usuario puede elegir entre e
 | - | mas lento |
 | m | mostrar menu |
 
-## LO QUE FUNCIONO
-
-El codigo compilo en Microchip Studio sin errores.
-
-El programa fue grabado correctamente en el ATmega328P usando avrdude por COM3.
-
-La grabacion final confirmo escritura y verificacion de la memoria flash.
-
-El monitor serial respondio correctamente a 9600 baudios.
-
-La matriz 1088AS funciono fisicamente despues de corregir un problema de hardware: una resistencia defectuosa causaba una columna con brillo anormal.
-
-La prueba con la tecla 5 mostro un patron tipo ajedrezado, util para verificar filas y columnas.
-
-Se corrigio la tabla del texto para que la letra M se visualice correctamente.
-
-Se ajustaron las teclas + y - para que el cambio de velocidad sea mas visible.
-
 ## PROBLEMAS ENCONTRADOS
 
 La simulacion en Proteus no pudo ejecutarse en esta instalacion porque el simulador mostro el error:
@@ -69,20 +51,6 @@ AVR2.DLL failed to authorize - Product Key not found
 El problema corresponde a licencia o autorizacion del modelo AVR, no al codigo ni al circuito.
 
 Durante el armado fisico se detecto una columna con brillo excesivo. La causa fue una resistencia defectuosa.
-
-## EVIDENCIAS QUE FALTAN AGREGAR
-
-Agregar capturas de Microchip Studio con 0 errores y 0 warnings en la carpeta `compilacion`.
-
-Agregar captura del error de Proteus en la carpeta `simulacion`.
-
-Agregar foto del armado fisico en la carpeta `armado_fisico`.
-
-Agregar video de funcionamiento fisico en la carpeta `armado_fisico`.
-
-Los archivos de texto `poner_aqui_capturas.txt` y `poner_aqui_fotos_y_videos.txt`
-son recordatorios temporales y deben reemplazarse por las evidencias reales antes
-de entregar el repositorio.
 
 ## TEXTO PARA INFORME
 
