@@ -27,5 +27,3 @@
 | Columna 6 | 11 | A2 |
 | Columna 7 | 15 | A1 |
 | Columna 8 | 16 | A0 |
-
-La comunicacion serial usa RX en D0 y TX en D1.
