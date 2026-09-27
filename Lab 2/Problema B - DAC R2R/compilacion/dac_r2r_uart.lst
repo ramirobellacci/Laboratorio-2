@@ -1,13 +1,10 @@
 
-AVRASM ver. 2.2.8  C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm Tue Sep 22 20:10:53 2026
+AVRASM ver. 2.2.8  Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm Sun Sep 27 17:40:34 2026
 
-C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm(6): Including file 'C:\Program Files (x86)\Atmel\Studio\7.0\packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
-C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm(6): Including file 'C:\Program Files (x86)\Atmel\Studio\7.0\packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
+Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm(3): Including file 'C:\Program Files (x86)\Atmel\Studio\7.0\packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
+Lab 2\Problema B - DAC R2R\codigo\dac_r2r_uart.asm(3): Including file 'C:\Program Files (x86)\Atmel\Studio\7.0\packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m328pdef.inc'
                                  
                                  
-                                 ; ATmega328P - Arduino UNO - 16 MHz
-                                 ; Salida DAC: D2 a D9
-                                 ; Monitor serial: 9600 baudios
                                  
                                  .include "m328pdef.inc"
                                  
@@ -990,7 +987,7 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
                                  
                                  ; ***** END OF FILE ******************************************************
                                  
-                                 .equ BPS = 103
+                                 .equ BPS = 12
                                  
                                  .def aux       = r16
                                  .def aux2      = r17
@@ -1017,7 +1014,7 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
                                  
 000008 e040                          ldi muestra, 0
 000009 e050                          ldi senal, 0          ; 0 = senal 13, 1 = senal 15
-00000a e062                          ldi velocidad, 2
+00000a e064                          ldi velocidad, 4
 00000b d075                          rcall CAMBIAR_VEL
                                  
 00000c d059                          rcall MENU
@@ -1030,10 +1027,9 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
 000011 9543                          inc muestra
 000012 cffa                          rjmp MAIN
                                  
-                                 ;---------------------------------------
+                                 ;--------------------
                                  ; CONFIGURACION
-                                 ;---------------------------------------
-                                 
+                                 ;---------------------
                                  PUERTOS:
                                      ; D0 RX, D1 TX, D2-D7 salida DAC
 000013 ef0c                          ldi aux, 0b11111100
@@ -1052,7 +1048,7 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
                                      ; 9600 baudios con clock de 16 MHz
 00001b e000                          ldi aux, high(BPS)
 00001c 9300 00c5                     sts UBRR0H, aux
-00001e e607                          ldi aux, low(BPS)
+00001e e00c                          ldi aux, low(BPS)
 00001f 9300 00c4                     sts UBRR0L, aux
                                  
 000021 e108                          ldi aux, (1<<RXEN0) | (1<<TXEN0)
@@ -1074,10 +1070,9 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
 00002f 9300 0016                     sts TIFR1, aux
 000031 9508                          ret
                                  
-                                 ;---------------------------------------
+                                 ;-----------
                                  ; USART
-                                 ;---------------------------------------
-                                 
+                                 ;------------
                                  PUTC:
 000032 9110 00c0                     lds aux2, UCSR0A
 000034 ff15                          sbrs aux2, UDRE0
@@ -1170,9 +1165,9 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
 000077 dfe8                          rcall TEXTO
 000078 9508                          ret
                                  
-                                 ;---------------------------------------
+                                 ;----------------
                                  ; TIMER Y DAC
-                                 ;---------------------------------------
+                                 ;---------------------
                                  
                                  ESPERAR_TIMER:
 000079 9100 0016                     lds aux, TIFR1
@@ -1277,10 +1272,9 @@ C:\Users\User\Documents\ChatGPT\Micro\Lab 2\Problema B - DAC R2R\codigo\dac_r2r_
 0000c3 b905                          out PORTB, aux
 0000c4 9508                          ret
                                  
-                                 ;---------------------------------------
+                                 ;-------------------
                                  ; TEXTOS Y TABLAS
-                                 ;---------------------------------------
-                                 
+                                 ;-------------------
                                  TXT1:
 0000c5 0a0d
 0000c6 414c

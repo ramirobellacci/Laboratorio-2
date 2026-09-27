@@ -2,7 +2,7 @@
 
 .include "m328pdef.inc"
 
-.equ BPS = 103
+.equ BPS = 12
 
 .def aux       = r16
 .def aux2      = r17
@@ -29,7 +29,7 @@ INICIO:
 
     ldi muestra, 0
     ldi senal, 0          ; 0 = senal 13, 1 = senal 15
-    ldi velocidad, 2
+    ldi velocidad, 4
     rcall CAMBIAR_VEL
 
     rcall MENU
