@@ -4,17 +4,12 @@
 
 | Cantidad | Componente |
 | ---: | --- |
-| 1 | ATmega328P-PU, encapsulado DIP-28 |
-| 1 | cristal de 16 MHz |
-| 2 | capacitores ceramicos de 22 pF |
-| 3 | capacitores ceramicos de 100 nF |
-| 1 | resistencia de 10 k para RESET |
+| 1 | ATmega328P, encapsulado DIP-28|
 | 7 | resistencias de 1 k, valor R |
 | 9 | resistencias de 2 k, valor 2R |
 | 1 | adaptador USB-TTL de 5 V |
 | 1 | protoboard y fuente regulada de 5 V |
 | 1 | osciloscopio |
-| 1 | capacitor electrolitico de 10 uF, recomendado |
 
 Conviene usar resistencias de 1 % en la red R-2R. Tambien se puede construir con
 R = 10 k y 2R = 20 k.
@@ -32,10 +27,6 @@ R = 10 k y 2R = 20 k.
 | 10 | XTAL2 | otro extremo del cristal de 16 MHz |
 | 1 | RESET | resistencia de 10 k a +5 V |
 
-Colocar un capacitor de 22 pF desde cada extremo del cristal a GND. Colocar un
-capacitor de 100 nF entre los pines 7 y 8, y otro entre los pines 20 y 22, lo mas
-cerca posible del microcontrolador. Se puede agregar un pulsador entre RESET y
-GND. El capacitor de 10 uF puede colocarse entre los rieles de +5 V y GND.
 
 ## Pines del DAC
 
