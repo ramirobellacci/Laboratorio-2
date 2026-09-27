@@ -96,12 +96,6 @@ Comandos:
 | - | mas lento |
 | m | menu |
 
-## Capturas para entregar
-
-- Circuito completo.
-- Terminal con menu.
-- Osciloscopio con senal 13.
-- Osciloscopio con senal 15.
 
 ## Nota importante
 
