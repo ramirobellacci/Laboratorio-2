@@ -34,9 +34,7 @@ VOUT -> bit7 -> R -> bit6 -> R -> bit5 -> R -> bit4
 ```
 
 Cada texto `bitN` representa un nodo que recibe el pin correspondiente a traves
-de una resistencia 2R. No conectar un LED directamente a VOUT porque carga la
-red y deforma la señal.
-
+de una resistencia 2R.
 
 ## Osciloscopio
 
