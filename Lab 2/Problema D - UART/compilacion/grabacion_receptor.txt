@@ -1,0 +1,7 @@
+GRABACION RECEPTOR
+
+Programa: Problema D Receptor.hex
+Puerto usado: COM8
+Microcontrolador: ATmega328P
+Resultado: grabado y verificado correctamente con avrdude
+Flash escrita: 202 bytes

@@ -1,0 +1,4 @@
+Guardar aqui capturas o archivos de simulacion si se realiza en Proteus.
+
+Si Proteus vuelve a fallar por licencia AVR, dejar captura del error y continuar con armado fisico.
+
