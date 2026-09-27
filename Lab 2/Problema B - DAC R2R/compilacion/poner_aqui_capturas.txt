@@ -1,4 +1,0 @@
-Agregar aqui:
-
-- captura de Microchip Studio con 0 errors y 0 warnings
-- archivo hex final
