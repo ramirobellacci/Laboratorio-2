@@ -1,5 +1,0 @@
-Agregar aqui:
-
-- captura de la simulacion
-- captura del osciloscopio
-- archivo del proyecto de simulacion

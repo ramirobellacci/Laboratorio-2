@@ -83,5 +83,4 @@ M MENU
 ```
 
 Enviar `1` y `2` para cambiar de señal. Usar `+` y `-` para modificar la
-frecuencia. Guardar capturas del circuito completo, el menu y ambas señales en
-el osciloscopio.
+frecuencia.

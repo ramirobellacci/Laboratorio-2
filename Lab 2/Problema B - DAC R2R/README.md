@@ -1,55 +1,36 @@
-# PROBLEMA B - DAC R-2R
+# Problema B
 
-## DATOS GENERALES
+## Componentes
 
-Grupo: 1
+- ATmega328P-PU en encapsulado DIP-28
+- 7 resistencias de 1 kOhm para R
+- 9 resistencias de 2 kOhm para 2R
+- Adaptador USB-TTL de 5 V
+- Protoboard y cables
+- Osciloscopio
 
-Microcontrolador: ATmega328P-PU independiente, encapsulado DIP-28
+## Conexiones
 
-Frecuencia: 16 MHz
+| Bit del DAC | Pin del ATmega328P | Pin Arduino |
+| ---: | --- | --- |
+| 0 (LSB) | PD2, pin 4 | D2 |
+| 1 | PD3, pin 5 | D3 |
+| 2 | PD4, pin 6 | D4 |
+| 3 | PD5, pin 11 | D5 |
+| 4 | PD6, pin 12 | D6 |
+| 5 | PD7, pin 13 | D7 |
+| 6 | PB0, pin 14 | D8 |
+| 7 (MSB) | PB1, pin 15 | D9 |
 
-Comunicacion serial: UART a 9600 baudios
+Los pines D2-D9 se conectan a la red R-2R. Cada pin va a su nodo a traves de
+una resistencia 2R y los nodos se unen con resistencias R. La salida VOUT se
+toma del nodo del bit 7; el nodo del bit 0 se termina con una resistencia 2R a
+GND.
 
-Senales asignadas: 15 y 13
-
-Salida: DAC R-2R de 8 bits
-
-Resistencias usadas: R = 1k y 2R = 2k
-
-## ARCHIVOS
-
-| carpeta | contenido |
+| Senal | Conexion |
 | --- | --- |
-| 01_codigo | codigo assembler final |
-| 02_compilacion | archivo hex final y capturas |
-| 03_simulacion | capturas o archivos de simulacion |
-| 04_armado_fisico | fotos, videos y conexion |
-| 05_informe | notas para el informe final |
-
-## FUNCIONES IMPLEMENTADAS
-
-| tecla | funcion |
-| --- | --- |
-| 1 | reproducir senal 13 |
-| 2 | reproducir senal 15 |
-| + | aumentar frecuencia de muestreo |
-| - | bajar frecuencia de muestreo |
-| m | mostrar menu |
-
-## LO QUE SE DEBE VERIFICAR
-
-El codigo debe compilar en Microchip Studio sin errores ni avisos.
-
-El monitor serial debe mostrar el menu a 9600 baudios.
-
-El osciloscopio debe mostrar una onda analogica al medir la salida del DAC R-2R.
-
-Las teclas 1 y 2 deben cambiar entre las senales 13 y 15.
-
-Las teclas + y - deben modificar la frecuencia de salida.
-
-## TEXTO PARA INFORME
-
-Para el problema B se implemento un conversor digital-analogico R-2R de 8 bits controlado por un ATmega328P programado en lenguaje ensamblador. Las salidas digitales D2 a D9 generan los bits del dato de la LUT, donde D2 corresponde al bit menos significativo y D9 al bit mas significativo. Estos bits alimentan una red resistiva R-2R, cuya salida analogica se mide con el osciloscopio.
-
-El programa utiliza dos tablas de consulta en memoria de programa, correspondientes a las senales 13 y 15 asignadas al grupo 1. Cada tabla contiene 256 muestras de 8 bits. La seleccion de la senal se realiza mediante comunicacion UART a 9600 baudios, usando un menu serial. La frecuencia de muestreo se controla con Timer1 en modo CTC y puede modificarse desde el puerto serial con las teclas + y -.
+| TX del ATmega (PD1, pin 3) | RXD del adaptador USB-TTL |
+| RX del ATmega (PD0, pin 2) | TXD del adaptador USB-TTL |
+| GND del ATmega | GND del adaptador y GND comun |
+| Punta del osciloscopio | VOUT de la red R-2R |
+| Tierra del osciloscopio | GND comun |

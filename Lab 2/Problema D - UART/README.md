@@ -1,59 +1,44 @@
-# PROBLEMA D - COMUNICACION USART UART
+# Problema D
 
-## DATOS GENERALES
+## Componentes
 
-Grupo: 1
+- 2 placas Arduino Uno compatibles con ATmega328P
+- 3 pulsadores
+- 8 LEDs
+- 8 resistencias para los LEDs
+- Protoboard y cables
 
-Microcontroladores: 2 ATmega328P en placas Arduino Uno compatibles
+## Conexiones
 
-Frecuencia: 16 MHz
+### Transmisor
 
-Comunicacion: UART a 9600 baudios
-
-Entrada del transmisor: 3 pulsadores
-
-Salida del receptor: 8 LEDs indicadores
-
-## ARCHIVOS
-
-| carpeta | contenido |
+| Componente | Pin Arduino |
 | --- | --- |
-| 01_codigo | codigos assembler del transmisor y receptor |
-| 02_compilacion | archivos hex y capturas de compilacion |
-| 03_simulacion | capturas o archivos de simulacion |
-| 04_armado_fisico | fotos, videos y conexion |
-| 05_informe | notas para el informe final |
+| Pulsador del bit 0 | D2 a GND |
+| Pulsador del bit 1 | D3 a GND |
+| Pulsador del bit 2 | D4 a GND |
+| TX UART | D1 |
 
-## FUNCIONAMIENTO
+Los pulsadores usan las resistencias pull-up internas.
 
-El transmisor lee tres pulsadores conectados a D2, D3 y D4 usando resistencias pull-up internas. Con esos tres bits forma un valor entre 0 y 7. Ese dato se envia por UART desde el pin D1 del transmisor hacia el pin D0 del receptor.
+### Receptor
 
-El receptor espera el dato por UART. Cuando recibe un valor entre 0 y 7, apaga todas las salidas y prende solamente el LED correspondiente al valor recibido. Las salidas usadas son D2 a D9.
+| LED | Pin Arduino |
+| ---: | --- |
+| 0 | D2 |
+| 1 | D3 |
+| 2 | D4 |
+| 3 | D5 |
+| 4 | D6 |
+| 5 | D7 |
+| 6 | D8 |
+| 7 | D9 |
 
-## CONEXION UART
+Cada LED lleva una resistencia en serie.
 
-TX del transmisor D1 hacia RX del receptor D0.
+### Conexion entre placas
 
-GND del transmisor unido con GND del receptor.
-
-## EVIDENCIA DE COMPILACION
-
-El codigo del transmisor fue compilado en Microchip Studio sin errores ni advertencias.
-
-El codigo del receptor fue compilado en Microchip Studio sin errores ni advertencias.
-
-## EVIDENCIA DE GRABACION
-
-El transmisor fue grabado correctamente en un Arduino Uno compatible usando COM3.
-
-El receptor fue grabado correctamente en un Arduino Uno compatible usando COM8.
-
-## EVIDENCIA DE ARMADO FISICO
-
-El circuito fue armado fisicamente con dos Arduino Uno compatibles. El transmisor uso tres pulsadores en D2, D3 y D4. El receptor uso ocho LEDs en D2 a D9.
-
-La prueba funciono correctamente. Al cambiar la combinacion de pulsadores en el transmisor, el receptor encendio la salida correspondiente al valor binario recibido entre 000 y 111.
-
-## NOTA PARA EL INFORME
-
-Para el problema D se implemento una comunicacion UART entre dos microcontroladores ATmega328P. El primer microcontrolador funciona como transmisor y permite seleccionar un numero binario de 3 bits mediante tres pulsadores. El segundo microcontrolador funciona como receptor, decodifica el dato recibido y activa una salida entre ocho LEDs indicadores, representando los valores de 0 a 7.
+| Transmisor | Receptor |
+| --- | --- |
+| D1 (TX) | D0 (RX) |
+| GND | GND |

@@ -1,2 +1,0 @@
-Pendiente completar con resultados de compilacion, simulacion y armado fisico.
-

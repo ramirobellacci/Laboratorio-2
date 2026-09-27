@@ -1,59 +1,41 @@
-# PROBLEMA E - PORTON DE GARAJE
+# Problema E
 
-## DATOS GENERALES
+## Componentes
 
-Microcontrolador: ATmega328P en placa Arduino Uno compatible
+- Arduino Uno compatible con ATmega328P
+- 5 pulsadores o llaves
+- 3 LEDs
+- 3 resistencias para los LEDs
+- Protoboard y cables
 
-Frecuencia: 16 MHz
+## Conexiones
 
-Comunicacion serial: UART a 9600 baudios
+### Entradas
 
-Implementacion: maquina de estados
+| Funcion | Pin Arduino | Conexion |
+| --- | --- | --- |
+| Boton abrir | D2 | Pulsador a GND |
+| Boton cerrar | D3 | Pulsador a GND |
+| Sensor puerta abierta | D4 | Pulsador o llave a GND |
+| Sensor puerta cerrada | D5 | Pulsador o llave a GND |
+| Sensor de obstaculo | D6 | Pulsador a GND |
 
-Actuadores reales simulados con LEDs
+Las entradas usan las resistencias pull-up internas.
 
-## ARCHIVOS
+### Salidas
 
-| carpeta | contenido |
+| Funcion simulada | Pin Arduino |
 | --- | --- |
-| 01_codigo | codigo assembler final |
-| 02_compilacion | archivo hex y capturas de compilacion |
-| 03_simulacion | capturas o archivos de simulacion |
-| 04_armado_fisico | fotos, videos y conexion |
-| 05_informe | notas para el informe final |
+| Motor abriendo | D8 |
+| Motor cerrando | D9 |
+| Alarma | D10 |
 
-## ESTADOS DEL SISTEMA
+Cada LED se conecta al pin Arduino a traves de una resistencia; la otra pata del
+LED va a GND.
 
-Puerta cerrada.
+### Comunicacion serial
 
-Puerta abriendo.
-
-Puerta abierta.
-
-Puerta cerrando.
-
-Movimiento detenido por seguridad.
-
-## EVENTOS POR UART
-
-Puerta abriendo.
-
-Puerta abierta.
-
-Puerta cerrando.
-
-Puerta cerrada.
-
-Obstaculo detectado.
-
-Movimiento detenido por seguridad.
-
-## ESTADO
-
-El codigo fue compilado localmente con avrasm2 y dio 0 errores y 0 advertencias.
-
-El codigo fue compilado en Microchip Studio y dio 0 errores y 0 advertencias.
-
-El programa fue grabado correctamente en el ATmega328P.
-
-El armado fisico fue probado con LEDs para simular el porton, el motor y la alarma.
+| Senal | Pin Arduino |
+| --- | --- |
+| RX | D0 |
+| TX | D1 |

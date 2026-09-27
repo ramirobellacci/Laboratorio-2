@@ -1,4 +1,0 @@
-Guardar aqui captura de Microchip Studio compilando sin errores ni advertencias.
-
-Guardar tambien el archivo hex final.
-

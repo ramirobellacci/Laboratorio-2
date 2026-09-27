@@ -1,4 +1,0 @@
-Guardar aqui las capturas de Microchip Studio compilando sin errores.
-
-Conviene guardar una captura del transmisor y otra del receptor.
-

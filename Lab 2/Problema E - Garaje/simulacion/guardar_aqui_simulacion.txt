@@ -1,4 +1,0 @@
-Guardar aqui capturas o archivos de simulacion si se realiza.
-
-Si se trabaja solo con armado fisico, se puede dejar esta carpeta como pendiente.
-

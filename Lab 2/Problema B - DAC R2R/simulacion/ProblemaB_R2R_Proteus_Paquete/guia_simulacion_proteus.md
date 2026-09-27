@@ -66,16 +66,3 @@ M MENU
 4. Enviar `1` para ver la senal 13.
 5. Enviar `2` para ver la senal 15.
 6. Usar `+` y `-` para cambiar la velocidad.
-
-## Evidencias
-
-Guardar capturas de:
-
-- Circuito completo en Proteus.
-- Terminal con el menu.
-- Osciloscopio mostrando senal 13.
-- Osciloscopio mostrando senal 15.
-
-## Nota
-
-Si Proteus muestra un error de licencia como `AVR2.DLL failed to authorize`, guardar captura del error. Ese error corresponde a la instalacion/licencia de Proteus, no al codigo.
