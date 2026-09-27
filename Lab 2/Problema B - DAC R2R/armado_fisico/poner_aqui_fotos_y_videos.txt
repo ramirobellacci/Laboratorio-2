@@ -1,6 +1,1 @@
-Agregar aqui:
 
-- foto del dac r-2r armado
-- video mostrando senal 13 en osciloscopio
-- video mostrando senal 15 en osciloscopio
-- video mostrando cambio de frecuencia con + y -
