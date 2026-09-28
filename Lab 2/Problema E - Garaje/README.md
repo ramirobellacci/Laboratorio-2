@@ -32,10 +32,3 @@ Las entradas usan las resistencias pull-up internas.
 
 Cada LED se conecta al pin Arduino a traves de una resistencia; la otra pata del
 LED va a GND.
-
-### Comunicacion serial
-
-| Senal | Pin Arduino |
-| --- | --- |
-| RX | D0 |
-| TX | D1 |
