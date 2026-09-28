@@ -52,19 +52,3 @@ Cada LED debe llevar resistencia en serie.
 | D1 TX | D0 RX |
 | GND | GND |
 
-Para grabar los programas conviene desconectar el cable entre D1 y D0. Despues de grabar, se vuelve a conectar para probar.
-
-## PRUEBA
-
-Con ningun pulsador apretado se envia 000 y debe prender el LED 0.
-
-Al apretar D2 se envia 001 y debe prender el LED 1.
-
-Al apretar D3 se envia 010 y debe prender el LED 2.
-
-Al apretar D2 y D3 se envia 011 y debe prender el LED 3.
-
-Al apretar D4 se envia 100 y debe prender el LED 4.
-
-Al combinar los tres pulsadores se prueban los valores hasta 111.
-
